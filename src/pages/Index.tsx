@@ -11,6 +11,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ClickSpark from '@/components/ClickSpark';
+import Aurora from '@/components/Aurora';
 import { useParallax } from '@/hooks/useParallax';
 
 const Index = () => {
@@ -50,11 +51,21 @@ const Index = () => {
       extraScale={1.2}
     >
       <main className="min-h-screen flex flex-col antialiased overflow-x-hidden relative">
+        {/* Aurora background layer */}
+        <div className="fixed inset-0 -z-30 opacity-40">
+          <Aurora 
+            colorStops={["#1e40af", "#f97316", "#dc2626"]}
+            amplitude={0.8}
+            blend={0.6}
+            speed={0.5}
+          />
+        </div>
+
         {/* Global background layers with parallax effect */}
         <div className="fixed inset-0 -z-20">
           {/* Primary layer - Programming with parallax */}
           <div 
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-15"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2000&q=80')`,
               backgroundAttachment: 'fixed',
@@ -67,7 +78,7 @@ const Index = () => {
           
           {/* Secondary layer - Laptop with parallax */}
           <div 
-            className="absolute inset-0 opacity-15"
+            className="absolute inset-0 opacity-10"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=2000&q=80')`,
               backgroundAttachment: 'fixed',
@@ -80,7 +91,7 @@ const Index = () => {
           
           {/* Tertiary layer - Colorful code with parallax */}
           <div 
-            className="absolute inset-0 opacity-10"
+            className="absolute inset-0 opacity-8"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=2000&q=80')`,
               backgroundAttachment: 'fixed',
@@ -92,7 +103,7 @@ const Index = () => {
           ></div>
           
           {/* Base gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-800/30 to-red-600/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-blue-800/20 to-red-600/30"></div>
         </div>
 
         {/* Floating elements with parallax */}
