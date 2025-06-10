@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { cn } from "@/lib/utils";
-import { Smartphone, Monitor, Laptop, Washing } from 'lucide-react';
+import { Smartphone, Monitor, Laptop, Zap } from 'lucide-react';
 
 const Services = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -59,7 +59,7 @@ const Services = () => {
       features: ["Diagnóstico gratuito", "Backup incluído", "Suporte técnico"]
     },
     {
-      icon: <Washing className="h-12 w-12" />,
+      icon: <Zap className="h-12 w-12" />,
       title: "Eletrodomésticos",
       description: "Reparo de máquinas de lavar, micro-ondas, geladeiras, fogões e outros eletrodomésticos.",
       features: ["Atendimento em casa", "Peças de qualidade", "Garantia estendida"]
