@@ -66,10 +66,10 @@ const AboutUs = () => {
     >
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 opacity-0" ref={el => elementsRef.current[0] = el} style={{ fontFamily: "'Orbitron', 'Inter', sans-serif" }}>
+          <h2 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold mb-4 opacity-0" ref={el => elementsRef.current[0] = el} style={{ fontFamily: "'Orbitron', 'Inter', sans-serif" }}>
             Sobre Nós
           </h2>
-          <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto mb-12 opacity-0" ref={el => elementsRef.current[1] = el}>
+          <p className="text-black/80 text-lg md:text-xl max-w-3xl mx-auto mb-12 opacity-0" ref={el => elementsRef.current[1] = el}>
             Somos especialistas em assistência técnica comprometidos com a excelência e a satisfação dos nossos clientes.
           </p>
         </div>
@@ -77,19 +77,19 @@ const AboutUs = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p 
-              className="text-white/80 opacity-0 text-lg" 
+              className="text-black/70 opacity-0 text-lg" 
               ref={el => elementsRef.current[2] = el}
             >
               Fundada em 2008, a <span className="font-semibold text-orange-400">TechHelp</span> nasceu com o propósito de transformar a relação entre pessoas e tecnologia, oferecendo um serviço que vai além do reparo básico.
             </p>
             <p 
-              className="text-white/80 opacity-0 text-lg" 
+              className="text-black/70 opacity-0 text-lg" 
               ref={el => elementsRef.current[3] = el}
             >
               Nossa missão é fornecer soluções técnicas claras e eficientes, auxiliando nossos clientes a manterem seus aparelhos funcionando perfeitamente por mais tempo.
             </p>
             <p 
-              className="text-white/80 opacity-0 text-lg" 
+              className="text-black/70 opacity-0 text-lg" 
               ref={el => elementsRef.current[4] = el}
             >
               Trabalhamos com ética, precisão e um profundo compromisso com a satisfação dos nossos clientes, construindo relações de confiança duradouras através da qualidade do nosso trabalho.
@@ -107,10 +107,10 @@ const AboutUs = () => {
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-white text-lg mb-2">
+                  <h3 className="font-display font-semibold text-black text-lg mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-white/80">
+                  <p className="text-black/70">
                     {feature.description}
                   </p>
                 </div>
