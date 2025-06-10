@@ -60,7 +60,7 @@ const Services = () => {
           <h2 className="section-title" ref={el => elementsRef.current[0] = el}>
             Nossos Serviços
           </h2>
-          <p className="section-subtitle" ref={el => elementsRef.current[1] = el}>
+          <p ref={el => elementsRef.current[1] = el} className="section-subtitle text-black">
             Oferecemos soluções completas para todos os seus equipamentos eletrônicos 
             com qualidade e garantia assegurada.
           </p>
