@@ -45,6 +45,25 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
+    /* Fundo parallax da placa de circuito */
+    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,249,255,0.92) 50%, rgba(255,255,255,0.95) 100%);
+    z-index: -1;
+    pointer-events: none;
   }
 }
 
@@ -82,6 +101,14 @@
     background-size: cover;
   }
   
+  .hero-parallax {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
   .animation-delay-100 {
     animation-delay: 100ms;
   }
@@ -112,5 +139,9 @@
   
   .service-card {
     @apply bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-8px];
+  }
+  
+  .tech-overlay {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(29, 78, 216, 0.85) 50%, rgba(239, 68, 68, 0.9) 100%);
   }
 }
