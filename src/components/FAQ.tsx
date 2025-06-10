@@ -64,7 +64,7 @@ const FAQ = () => {
           <h2 className="section-title" ref={el => elementsRef.current[0] = el}>
             Perguntas Frequentes
           </h2>
-          <p className="section-subtitle" ref={el => elementsRef.current[1] = el}>
+          <p ref={el => elementsRef.current[1] = el} className="section-subtitle text-zinc-950">
             Tire suas dúvidas sobre nossos serviços e processo de atendimento
           </p>
         </div>

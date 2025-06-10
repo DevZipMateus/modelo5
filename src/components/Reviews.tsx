@@ -68,7 +68,7 @@ const Reviews = () => {
           <h2 className="section-title" ref={el => elementsRef.current[0] = el}>
             O Que Nossos Clientes Dizem
           </h2>
-          <p className="section-subtitle" ref={el => elementsRef.current[1] = el}>
+          <p ref={el => elementsRef.current[1] = el} className="section-subtitle text-zinc-950">
             Centenas de clientes satisfeitos confiam na TechHelp Soluções para cuidar de seus equipamentos
           </p>
         </div>
