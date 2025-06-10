@@ -36,16 +36,31 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col antialiased overflow-x-hidden">
+    <main className="min-h-screen flex flex-col antialiased overflow-x-hidden relative">
+      {/* Circuit pattern overlay for entire page */}
+      <div className="circuit-overlay fixed inset-0 z-0 pointer-events-none"></div>
+      
       <NavBar />
       <Hero />
-      <div className="space-y-0">
-        <Services />
-        <HowItWorks />
-        <AboutUs />
-        <Reviews />
-        <FAQ />
-        <Contact />
+      <div className="space-y-0 relative z-10">
+        <div className="section-bg-semi">
+          <Services />
+        </div>
+        <div className="section-bg-alt">
+          <HowItWorks />
+        </div>
+        <div className="section-bg-semi">
+          <AboutUs />
+        </div>
+        <div className="section-bg-alt">
+          <Reviews />
+        </div>
+        <div className="section-bg-semi">
+          <FAQ />
+        </div>
+        <div className="section-bg-alt">
+          <Contact />
+        </div>
       </div>
       <Footer />
       <WhatsAppButton />

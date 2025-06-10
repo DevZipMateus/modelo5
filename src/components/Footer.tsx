@@ -13,15 +13,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-accounting-navy text-white pt-14 pb-8">
+    <footer className="bg-tech-blue/95 backdrop-blur-md text-white pt-14 pb-8 relative z-10 border-t border-white/10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-10">
           <div>
             <h3 className="font-display font-bold text-xl mb-4">
-              Conta<span className="text-accounting-lightblue">Precisão</span>
+              Tech<span className="text-tech-orange">Help</span>
             </h3>
-            <p className="text-accounting-lightgray mb-4 max-w-sm">
-              Transformamos números complexos em soluções claras. Deixe-nos cuidar da sua contabilidade enquanto você foca no crescimento do seu negócio.
+            <p className="text-white/80 mb-4 max-w-sm">
+              Transformamos problemas técnicos em soluções eficazes. Deixe-nos cuidar dos seus eletrônicos enquanto você foca no que realmente importa.
             </p>
           </div>
           
@@ -33,7 +33,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#home" 
-                  className="text-accounting-lightgray hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection('home');
@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#about" 
-                  className="text-accounting-lightgray hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection('about');
@@ -57,7 +57,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#services" 
-                  className="text-accounting-lightgray hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection('services');
@@ -68,20 +68,20 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="#plans" 
-                  className="text-accounting-lightgray hover:text-white transition-colors duration-300"
+                  href="#how-it-works" 
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection('plans');
+                    scrollToSection('how-it-works');
                   }}
                 >
-                  Planos
+                  Como Funciona
                 </a>
               </li>
               <li>
                 <a 
                   href="#contact" 
-                  className="text-accounting-lightgray hover:text-white transition-colors duration-300"
+                  className="text-white/80 hover:text-white transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection('contact');
@@ -97,19 +97,19 @@ const Footer = () => {
             <h3 className="font-display font-semibold text-lg mb-4">
               Contato
             </h3>
-            <address className="not-italic text-accounting-lightgray space-y-2">
-              <p>Av. Paulista, 1000 - Bela Vista</p>
-              <p>São Paulo - SP, 01310-100</p>
-              <p>+55 (11) 3456-7890</p>
-              <p>contato@contaprecisao.com.br</p>
+            <address className="not-italic text-white/80 space-y-2">
+              <p>Rua da Tecnologia, 123 - Centro</p>
+              <p>São Paulo - SP, 01234-567</p>
+              <p>+55 (11) 99988-7766</p>
+              <p>contato@techhelp.com.br</p>
             </address>
           </div>
         </div>
         
-        <hr className="border-accounting-lightblue/20 mb-8" />
+        <hr className="border-white/20 mb-8" />
         
-        <div className="text-center text-accounting-lightgray text-sm">
-          <p>&copy; {currentYear} ContaPrecisão. Todos os direitos reservados.</p>
+        <div className="text-center text-white/80 text-sm">
+          <p>&copy; {currentYear} TechHelp Soluções. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

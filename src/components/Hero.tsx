@@ -2,10 +2,12 @@
 import React, { useEffect, useRef } from 'react';
 import { cn } from "@/lib/utils";
 import { ArrowDown, Wrench, Shield, Clock } from 'lucide-react';
+import { useParallax } from '@/hooks/useParallax';
 
 const Hero = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
+  const { scrollY, getParallaxBackgroundStyle } = useParallax();
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -45,47 +47,67 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
     >
-      {/* Background com múltiplas imagens e efeito parallax */}
+      {/* Background com múltiplas imagens e efeito parallax melhorado */}
       <div className="absolute inset-0 -z-10">
-        {/* Camada principal - Programação */}
+        {/* Camada principal - Programação com parallax */}
         <div 
-          className="absolute inset-0 hero-parallax opacity-30"
+          className="absolute inset-0 opacity-25"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2000&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2000&q=80')`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            ...getParallaxBackgroundStyle(0.3),
           }}
         ></div>
         
-        {/* Camada secundária - Laptop */}
+        {/* Camada secundária - Laptop com parallax mais lento */}
         <div 
-          className="absolute inset-0 hero-parallax opacity-20"
+          className="absolute inset-0 opacity-15"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=2000&q=80')`,
-            backgroundPosition: 'right center'
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            ...getParallaxBackgroundStyle(0.5),
           }}
         ></div>
         
-        {/* Camada terciária - Código colorido */}
+        {/* Camada terciária - Código colorido com parallax mais rápido */}
         <div 
-          className="absolute inset-0 hero-parallax opacity-15"
+          className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=2000&q=80')`,
-            backgroundPosition: 'left center'
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'left center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            ...getParallaxBackgroundStyle(0.2),
           }}
         ></div>
         
-        {/* Overlay com gradiente tecnológico */}
-        <div className="absolute inset-0 tech-overlay"></div>
+        {/* Overlay com gradiente tecnológico mais suave */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-blue-800/50 to-red-600/60"></div>
         
-        {/* Padrão de circuitos sutil */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.8'%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3Cpath d='M40 30v20M30 40h20M35 35l10 10M45 35l-10 10'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
-        
-        {/* Elementos geométricos flutuantes */}
-        <div className="absolute top-20 left-10 w-3 h-3 bg-white/20 rounded-full animate-float"></div>
-        <div className="absolute top-32 right-16 w-2 h-2 bg-tech-orange/30 rounded-full animate-float animation-delay-500"></div>
-        <div className="absolute bottom-32 left-20 w-4 h-4 bg-tech-green/20 rounded-full animate-float animation-delay-300"></div>
-        <div className="absolute bottom-20 right-12 w-2 h-2 bg-white/30 rounded-full animate-float animation-delay-700"></div>
+        {/* Elementos geométricos flutuantes com parallax */}
+        <div 
+          className="absolute top-20 left-10 w-3 h-3 bg-white/20 rounded-full animate-float"
+          style={getParallaxBackgroundStyle(0.1)}
+        ></div>
+        <div 
+          className="absolute top-32 right-16 w-2 h-2 bg-tech-orange/30 rounded-full animate-float animation-delay-500"
+          style={getParallaxBackgroundStyle(0.15)}
+        ></div>
+        <div 
+          className="absolute bottom-32 left-20 w-4 h-4 bg-tech-green/20 rounded-full animate-float animation-delay-300"
+          style={getParallaxBackgroundStyle(0.25)}
+        ></div>
+        <div 
+          className="absolute bottom-20 right-12 w-2 h-2 bg-white/30 rounded-full animate-float animation-delay-700"
+          style={getParallaxBackgroundStyle(0.2)}
+        ></div>
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
