@@ -107,19 +107,19 @@
     position: relative;
   }
   
-  /* Semi-transparent section backgrounds with reduced opacity */
+  /* Semi-transparent section backgrounds with drastically reduced opacity */
   .section-bg-semi {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(5px);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
   
   .section-bg-alt {
-    background: rgba(240, 249, 255, 0.20);
-    backdrop-filter: blur(6px);
-    border-top: 1px solid rgba(240, 249, 255, 0.20);
-    border-bottom: 1px solid rgba(240, 249, 255, 0.20);
+    background: rgba(240, 249, 255, 0.03);
+    backdrop-filter: blur(2px);
+    border-top: 1px solid rgba(240, 249, 255, 0.08);
+    border-bottom: 1px solid rgba(240, 249, 255, 0.08);
   }
   
   .animation-delay-100 {

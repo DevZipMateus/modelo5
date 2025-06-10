@@ -63,11 +63,11 @@ const Index = () => {
 
         {/* Global background layers with parallax effect */}
         <div className="fixed inset-0 -z-20">
-          {/* Primary layer - Programming with parallax */}
+          {/* Primary layer - Circuit board with parallax */}
           <div 
             className="absolute inset-0 opacity-15"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2000&q=80')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80')`,
               backgroundAttachment: 'fixed',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
