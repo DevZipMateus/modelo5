@@ -62,7 +62,7 @@ const Reviews = () => {
       length: 5
     }, (_, index) => <Star key={index} className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />);
   };
-  return <section id="reviews" ref={sectionRef} className="bg-white py-20">
+  return <section id="reviews" ref={sectionRef} className="py-20 bg-transparent">
       <div className="section-container bg-transparent">
         <div className="text-center mb-16">
           <h2 className="section-title" ref={el => elementsRef.current[0] = el}>
