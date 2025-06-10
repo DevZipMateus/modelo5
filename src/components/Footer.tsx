@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-10">
           <div>
             <h3 className="font-display font-bold text-xl mb-4">
-              Tech<span className="text-tech-orange">Help</span>
+              Tech<span className="text-accent">Help</span>
             </h3>
             <p className="text-white/80 mb-4 max-w-sm">
               Transformamos problemas técnicos em soluções eficazes. Deixe-nos cuidar dos seus eletrônicos enquanto você foca no que realmente importa.

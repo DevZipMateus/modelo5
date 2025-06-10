@@ -43,38 +43,10 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-transparent text-foreground antialiased;
     font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
-    /* Fundo parallax da placa de circuito - agora mais visível */
-    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     min-height: 100vh;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Reduzida a opacidade para tornar o fundo mais visível */
-    background: linear-gradient(135deg, rgba(255,255,255,0.75) 0%, rgba(240,249,255,0.70) 50%, rgba(255,255,255,0.75) 100%);
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  /* Parallax container for sections */
-  .parallax-container {
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   /* Dynamic parallax effect */
@@ -174,6 +146,10 @@
     animation-delay: 600ms;
   }
   
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+  
   .tech-gradient {
     background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(215, 60%, 55%) 50%, hsl(24, 90%, 55%) 100%);
   }
@@ -209,5 +185,35 @@
     opacity: 0.15;
     background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.8'%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3Cpath d='M40 30v20M30 40h20M35 35l10 10M45 35l-10 10'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     pointer-events: none;
+  }
+
+  /* Float animation for floating elements */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Slide up animation */
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
   }
 }

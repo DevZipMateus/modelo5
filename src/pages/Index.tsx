@@ -10,8 +10,11 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { useParallax } from '@/hooks/useParallax';
 
 const Index = () => {
+  const { getParallaxBackgroundStyle } = useParallax();
+
   useEffect(() => {
     // Ensure smooth scroll behavior works properly
     const handleHashChange = () => {
@@ -37,8 +40,71 @@ const Index = () => {
 
   return (
     <main className="min-h-screen flex flex-col antialiased overflow-x-hidden relative">
+      {/* Global background layers with parallax effect */}
+      <div className="fixed inset-0 -z-20">
+        {/* Primary layer - Programming with parallax */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2000&q=80')`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            ...getParallaxBackgroundStyle(0.3),
+          }}
+        ></div>
+        
+        {/* Secondary layer - Laptop with parallax */}
+        <div 
+          className="absolute inset-0 opacity-15"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=2000&q=80')`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            ...getParallaxBackgroundStyle(0.5),
+          }}
+        ></div>
+        
+        {/* Tertiary layer - Colorful code with parallax */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=2000&q=80')`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'left center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            ...getParallaxBackgroundStyle(0.2),
+          }}
+        ></div>
+        
+        {/* Base gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-blue-800/30 to-red-600/40"></div>
+      </div>
+
+      {/* Floating elements with parallax */}
+      <div 
+        className="fixed top-20 left-10 w-3 h-3 bg-white/20 rounded-full animate-float -z-10"
+        style={getParallaxBackgroundStyle(0.1)}
+      ></div>
+      <div 
+        className="fixed top-32 right-16 w-2 h-2 bg-accent/30 rounded-full animate-float animation-delay-500 -z-10"
+        style={getParallaxBackgroundStyle(0.15)}
+      ></div>
+      <div 
+        className="fixed bottom-32 left-20 w-4 h-4 bg-tech-green/20 rounded-full animate-float animation-delay-300 -z-10"
+        style={getParallaxBackgroundStyle(0.25)}
+      ></div>
+      <div 
+        className="fixed bottom-20 right-12 w-2 h-2 bg-white/30 rounded-full animate-float animation-delay-700 -z-10"
+        style={getParallaxBackgroundStyle(0.2)}
+      ></div>
+      
       {/* Circuit pattern overlay for entire page */}
-      <div className="circuit-overlay fixed inset-0 z-0 pointer-events-none"></div>
+      <div className="circuit-overlay fixed inset-0 -z-10 pointer-events-none"></div>
       
       <NavBar />
       <Hero />
