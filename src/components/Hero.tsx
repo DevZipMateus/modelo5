@@ -84,7 +84,12 @@ const Hero = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                filter: 'drop-shadow(0 0 20px rgba(249, 115, 22, 0.3))'
+                textShadow: `
+                  0 0 10px rgba(249, 115, 22, 0.8),
+                  0 0 20px rgba(249, 115, 22, 0.6),
+                  0 0 30px rgba(239, 68, 68, 0.4),
+                  0 0 40px rgba(220, 38, 38, 0.2)
+                `
               }}
             >
               Seu Eletrônico em 
@@ -96,7 +101,12 @@ const Hero = () => {
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                  filter: 'drop-shadow(0 0 30px rgba(220, 38, 38, 0.5))'
+                  textShadow: `
+                    0 0 15px rgba(249, 115, 22, 0.9),
+                    0 0 25px rgba(239, 68, 68, 0.7),
+                    0 0 35px rgba(220, 38, 38, 0.5),
+                    0 0 45px rgba(185, 28, 28, 0.3)
+                  `
                 }}
               >
                 Boas Mãos
