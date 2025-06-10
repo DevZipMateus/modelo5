@@ -55,7 +55,7 @@ const HowItWorks = () => {
           <h2 className="section-title" ref={el => elementsRef.current[0] = el}>
             Como Funciona
           </h2>
-          <p ref={el => elementsRef.current[1] = el} className="section-subtitle text-4xl">
+          <p ref={el => elementsRef.current[1] = el} className="section-subtitle text-4xl text-black">
             Um processo simples e transparente para resolver os problemas do seu equipamento
           </p>
         </div>
