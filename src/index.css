@@ -107,19 +107,19 @@
     position: relative;
   }
   
-  /* Semi-transparent section backgrounds */
+  /* Semi-transparent section backgrounds with reduced opacity */
   .section-bg-semi {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   
   .section-bg-alt {
-    background: rgba(240, 249, 255, 0.80);
-    backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(240, 249, 255, 0.3);
-    border-bottom: 1px solid rgba(240, 249, 255, 0.3);
+    background: rgba(240, 249, 255, 0.20);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(240, 249, 255, 0.20);
+    border-bottom: 1px solid rgba(240, 249, 255, 0.20);
   }
   
   .animation-delay-100 {
@@ -155,7 +155,7 @@
   }
   
   .service-card {
-    @apply bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-8px] border border-white/20;
+    @apply bg-white/70 backdrop-blur-md rounded-xl p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-8px] border border-white/20;
   }
   
   .tech-overlay {
