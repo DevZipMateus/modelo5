@@ -29,13 +29,8 @@ export const useParallax = () => {
     transform: `translateY(${scrollY * speed}px)`,
   });
 
-  const getParallaxBackgroundStyle = (speed: number = 0.3) => ({
-    transform: `translate3d(0, ${scrollY * speed}px, 0)`,
-  });
-
   return {
     scrollY,
     getParallaxStyle,
-    getParallaxBackgroundStyle,
   };
 };

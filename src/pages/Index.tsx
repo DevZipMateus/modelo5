@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
@@ -15,7 +14,7 @@ import Aurora from '@/components/Aurora';
 import { useParallax } from '@/hooks/useParallax';
 
 const Index = () => {
-  const { getParallaxBackgroundStyle } = useParallax();
+  const { getParallaxStyle } = useParallax();
 
   useEffect(() => {
     // Ensure smooth scroll behavior works properly
@@ -61,31 +60,29 @@ const Index = () => {
           />
         </div>
 
-        {/* Main global background with parallax effect */}
+        {/* Main global background with CSS-only fixed attachment */}
         <div className="fixed inset-0 -z-20">
-          {/* Primary background - Circuit board image with parallax */}
+          {/* Primary background - Circuit board image with fixed attachment */}
           <div 
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-25"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1731400800900-1bce57414c09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBsYWNhJTIwZGUlMjBjaXJjdWl0byUyMGVsZXRyaWNvfGVufDB8fDB8fHwy')`,
               backgroundAttachment: 'fixed',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-              ...getParallaxBackgroundStyle(0.3),
             }}
           ></div>
           
-          {/* Secondary layer for depth */}
+          {/* Secondary layer for depth - also with fixed attachment */}
           <div 
-            className="absolute inset-0 opacity-10"
+            className="absolute inset-0 opacity-15"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80')`,
               backgroundAttachment: 'fixed',
               backgroundPosition: 'right center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-              ...getParallaxBackgroundStyle(0.5),
             }}
           ></div>
           
@@ -93,22 +90,22 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-blue-800/20 to-red-600/30"></div>
         </div>
 
-        {/* Floating elements with parallax */}
+        {/* Floating elements with JavaScript parallax - these keep the parallax effect */}
         <div 
           className="fixed top-20 left-10 w-3 h-3 bg-white/20 rounded-full animate-float -z-10"
-          style={getParallaxBackgroundStyle(0.1)}
+          style={getParallaxStyle(0.1)}
         ></div>
         <div 
           className="fixed top-32 right-16 w-2 h-2 bg-accent/30 rounded-full animate-float animation-delay-500 -z-10"
-          style={getParallaxBackgroundStyle(0.15)}
+          style={getParallaxStyle(0.15)}
         ></div>
         <div 
           className="fixed bottom-32 left-20 w-4 h-4 bg-tech-green/20 rounded-full animate-float animation-delay-300 -z-10"
-          style={getParallaxBackgroundStyle(0.25)}
+          style={getParallaxStyle(0.25)}
         ></div>
         <div 
           className="fixed bottom-20 right-12 w-2 h-2 bg-white/30 rounded-full animate-float animation-delay-700 -z-10"
-          style={getParallaxBackgroundStyle(0.2)}
+          style={getParallaxStyle(0.2)}
         ></div>
         
         {/* Circuit pattern overlay for entire page */}
