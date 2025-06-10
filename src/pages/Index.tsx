@@ -61,13 +61,13 @@ const Index = () => {
           />
         </div>
 
-        {/* Global background layers with parallax effect */}
+        {/* Main global background with parallax effect */}
         <div className="fixed inset-0 -z-20">
-          {/* Primary layer - Circuit board with parallax */}
+          {/* Primary background - Circuit board image with parallax */}
           <div 
-            className="absolute inset-0 opacity-15"
+            className="absolute inset-0 opacity-20"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1731400800900-1bce57414c09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBsYWNhJTIwZGUlMjBjaXJjdWl0byUyMGVsZXRyaWNvfGVufDB8fDB8fHwy')`,
               backgroundAttachment: 'fixed',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -76,29 +76,16 @@ const Index = () => {
             }}
           ></div>
           
-          {/* Secondary layer - Laptop with parallax */}
+          {/* Secondary layer for depth */}
           <div 
             className="absolute inset-0 opacity-10"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=2000&q=80')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80')`,
               backgroundAttachment: 'fixed',
               backgroundPosition: 'right center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               ...getParallaxBackgroundStyle(0.5),
-            }}
-          ></div>
-          
-          {/* Tertiary layer - Colorful code with parallax */}
-          <div 
-            className="absolute inset-0 opacity-8"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=2000&q=80')`,
-              backgroundAttachment: 'fixed',
-              backgroundPosition: 'left center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              ...getParallaxBackgroundStyle(0.2),
             }}
           ></div>
           
