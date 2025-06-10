@@ -179,7 +179,7 @@
   }
   
   .service-card {
-    @apply bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-8px)] border border-white/20;
+    @apply bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-8px] border border-white/20;
   }
   
   .tech-overlay {
