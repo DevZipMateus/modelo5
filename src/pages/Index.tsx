@@ -2,9 +2,11 @@
 import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
-import AboutUs from '@/components/AboutUs';
 import Services from '@/components/Services';
-import Plans from '@/components/Plans';
+import HowItWorks from '@/components/HowItWorks';
+import AboutUs from '@/components/AboutUs';
+import Reviews from '@/components/Reviews';
+import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -37,10 +39,12 @@ const Index = () => {
     <main className="min-h-screen flex flex-col antialiased overflow-x-hidden">
       <NavBar />
       <Hero />
-      <div className="space-y-0"> {/* Removed spacing between sections */}
-        <AboutUs />
+      <div className="space-y-0">
         <Services />
-        <Plans />
+        <HowItWorks />
+        <AboutUs />
+        <Reviews />
+        <FAQ />
         <Contact />
       </div>
       <Footer />

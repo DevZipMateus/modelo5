@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,31 +7,32 @@
 
 @layer base {
   :root {
-    /* Cores primárias 60% */
-    --background: 215 33% 99%;
-    --foreground: 215 60% 20%;
+    /* Cores primárias - tons de azul e cinza */
+    --background: 215 25% 97%;
+    --foreground: 215 60% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 215 60% 20%;
+    --card-foreground: 215 60% 15%;
 
-    /* Cores secundárias 30% */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 40% 40%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 40 30% 53%;
-    --accent-foreground: 222 47% 11%;
+    /* Cores secundárias */
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 215 40% 30%;
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 16% 46%;
+    --accent: 24 90% 55%; /* Laranja para destaques */
+    --accent-foreground: 0 0% 100%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 60% 20%;
+    --popover-foreground: 215 60% 15%;
 
-    /* Cores de contraste 10% */
-    --primary: 139 61% 42%;
+    /* Cores de contraste */
+    --primary: 215 70% 45%; /* Azul principal */
     --primary-foreground: 0 0% 100%;
+    --tech-green: 142 70% 45%; /* Verde para CTAs secundários */
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
     
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 139 61% 42%;
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 215 70% 45%;
 
     --radius: 0.5rem;
   }
@@ -49,19 +50,36 @@
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20;
   }
   
   .section-title {
-    @apply text-foreground text-3xl md:text-4xl font-display font-bold mb-2 opacity-0 animate-slide-up;
+    @apply text-foreground text-3xl md:text-4xl lg:text-5xl font-bold mb-4 opacity-0 animate-slide-up;
+    font-family: 'Orbitron', 'Inter', sans-serif;
   }
   
   .section-subtitle {
-    @apply text-secondary-foreground text-lg md:text-xl max-w-3xl mx-auto mb-8 opacity-0 animate-slide-up animation-delay-200;
+    @apply text-secondary-foreground text-lg md:text-xl max-w-3xl mx-auto mb-12 opacity-0 animate-slide-up animation-delay-200;
+  }
+  
+  .hero-title {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 opacity-0 animate-slide-up;
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(24, 90%, 55%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   .card-shadow {
-    @apply shadow-[0px_4px_25px_rgba(0,0,0,0.05)];
+    @apply shadow-[0px_8px_30px_rgba(0,0,0,0.08)];
+  }
+  
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .animation-delay-100 {
@@ -88,7 +106,11 @@
     animation-delay: 600ms;
   }
   
-  .blue-gradient {
-    background: linear-gradient(135deg, hsl(215, 60%, 20%) 0%, hsl(215, 40%, 40%) 100%);
+  .tech-gradient {
+    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(215, 60%, 55%) 50%, hsl(24, 90%, 55%) 100%);
+  }
+  
+  .service-card {
+    @apply bg-white rounded-xl p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-8px];
   }
 }
