@@ -80,37 +80,15 @@ const Hero = () => {
               style={{ 
                 animationDelay: '200ms',
                 fontFamily: "'Orbitron', 'Inter', sans-serif",
-                background: 'linear-gradient(135deg, #f97316 0%, #ea580c 30%, #dc2626 70%, #b91c1c 100%)',
+                background: 'linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #fbbf24 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: `
-                  0 0 10px rgba(249, 115, 22, 0.8),
-                  0 0 20px rgba(249, 115, 22, 0.6),
-                  0 0 30px rgba(239, 68, 68, 0.4),
-                  0 0 40px rgba(220, 38, 38, 0.2)
-                `
+                backgroundClip: 'text'
               }}
             >
               Seu Eletrônico em 
               <br />
-              <span 
-                className="font-black"
-                style={{
-                  background: 'linear-gradient(135deg, #f97316 0%, #ea580c 30%, #dc2626 70%, #b91c1c 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  textShadow: `
-                    0 0 15px rgba(249, 115, 22, 0.9),
-                    0 0 25px rgba(239, 68, 68, 0.7),
-                    0 0 35px rgba(220, 38, 38, 0.5),
-                    0 0 45px rgba(185, 28, 28, 0.3)
-                  `
-                }}
-              >
-                Boas Mãos
-              </span>
+              <span className="text-white">Boas Mãos</span>
             </h1>
             
             <p 

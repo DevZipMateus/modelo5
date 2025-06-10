@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { cn } from "@/lib/utils";
-import { Wrench, Shield, Clock } from 'lucide-react';
+import { LineChart, BarChart, Trophy } from 'lucide-react';
 
 const AboutUs = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -42,19 +42,19 @@ const AboutUs = () => {
 
   const features = [
     {
-      icon: <Wrench className="h-10 w-10 text-orange-500" />,
-      title: "Experiência Técnica",
-      description: "Mais de 15 anos de experiência reparando TVs, celulares, computadores e eletrodomésticos de todas as marcas."
+      icon: <LineChart className="h-10 w-10 text-accounting-gold" />,
+      title: "Experiência Comprovada",
+      description: "Mais de 15 anos de experiência atendendo empresas de diferentes portes e segmentos."
     },
     {
-      icon: <Shield className="h-10 w-10 text-orange-500" />,
-      title: "Garantia Assegurada",
-      description: "Todos os nossos serviços incluem garantia, proporcionando tranquilidade e confiança aos nossos clientes."
+      icon: <BarChart className="h-10 w-10 text-accounting-gold" />,
+      title: "Atendimento Personalizado",
+      description: "Soluções sob medida para as necessidades específicas da sua empresa e do seu segmento."
     },
     {
-      icon: <Clock className="h-10 w-10 text-orange-500" />,
-      title: "Atendimento Rápido",
-      description: "Diagnóstico preciso e reparo eficiente para que você possa voltar a usar seus aparelhos o mais rápido possível."
+      icon: <Trophy className="h-10 w-10 text-accounting-gold" />,
+      title: "Equipe Qualificada",
+      description: "Profissionais especializados e constantemente atualizados com as mudanças fiscais e tributárias."
     }
   ];
 
@@ -62,37 +62,37 @@ const AboutUs = () => {
     <section 
       id="about" 
       ref={sectionRef}
-      className="py-20 relative"
+      className="py-20 bg-white"
     >
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 opacity-0" ref={el => elementsRef.current[0] = el} style={{ fontFamily: "'Orbitron', 'Inter', sans-serif" }}>
+          <h2 className="section-title" ref={el => elementsRef.current[0] = el}>
             Sobre Nós
           </h2>
-          <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto mb-12 opacity-0" ref={el => elementsRef.current[1] = el}>
-            Somos especialistas em assistência técnica comprometidos com a excelência e a satisfação dos nossos clientes.
+          <p className="section-subtitle" ref={el => elementsRef.current[1] = el}>
+            Somos um escritório de contabilidade comprometido com a excelência e a transparência nos serviços prestados.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p 
-              className="text-white/80 opacity-0 text-lg" 
+              className="text-accounting-gray opacity-0" 
               ref={el => elementsRef.current[2] = el}
             >
-              Fundada em 2008, a <span className="font-semibold text-orange-400">TechHelp</span> nasceu com o propósito de transformar a relação entre pessoas e tecnologia, oferecendo um serviço que vai além do reparo básico.
+              Fundada em 2008, a <span className="font-semibold text-accounting-navy">ContaPrecisão</span> nasceu com o propósito de transformar a relação entre empresas e a contabilidade, oferecendo um serviço que vai além dos números.
             </p>
             <p 
-              className="text-white/80 opacity-0 text-lg" 
+              className="text-accounting-gray opacity-0" 
               ref={el => elementsRef.current[3] = el}
             >
-              Nossa missão é fornecer soluções técnicas claras e eficientes, auxiliando nossos clientes a manterem seus aparelhos funcionando perfeitamente por mais tempo.
+              Nossa missão é fornecer soluções contábeis claras e estratégicas, auxiliando nossos clientes a tomarem as melhores decisões para o crescimento sustentável de seus negócios.
             </p>
             <p 
-              className="text-white/80 opacity-0 text-lg" 
+              className="text-accounting-gray opacity-0" 
               ref={el => elementsRef.current[4] = el}
             >
-              Trabalhamos com ética, precisão e um profundo compromisso com a satisfação dos nossos clientes, construindo relações de confiança duradouras através da qualidade do nosso trabalho.
+              Trabalhamos com ética, precisão e um profundo compromisso com a satisfação dos nossos clientes, construindo relações de confiança duradouras.
             </p>
           </div>
 
@@ -100,17 +100,17 @@ const AboutUs = () => {
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-lg flex items-start space-x-4 opacity-0 hover:bg-white/15 transition-all duration-300"
+                className="bg-accounting-lightgray/50 p-6 rounded-lg flex items-start space-x-4 opacity-0"
                 ref={el => elementsRef.current[5 + index] = el}
               >
                 <div className="flex-shrink-0 mt-1">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-white text-lg mb-2">
+                  <h3 className="font-display font-semibold text-accounting-navy text-lg mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-white/80">
+                  <p className="text-accounting-gray">
                     {feature.description}
                   </p>
                 </div>
