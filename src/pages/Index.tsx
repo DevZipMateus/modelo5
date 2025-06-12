@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
@@ -10,7 +11,6 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ClickSpark from '@/components/ClickSpark';
-import Aurora from '@/components/Aurora';
 import { useParallax } from '@/hooks/useParallax';
 
 const Index = () => {
@@ -50,47 +50,7 @@ const Index = () => {
       extraScale={1.2}
     >
       <main className="min-h-screen flex flex-col antialiased overflow-x-hidden relative">
-        {/* Aurora background layer */}
-        <div className="fixed inset-0 -z-30 opacity-40">
-          <Aurora 
-            colorStops={["#1e40af", "#f97316", "#dc2626"]}
-            amplitude={0.8}
-            blend={0.6}
-            speed={0.5}
-          />
-        </div>
-
-        {/* Main global background with CSS-only fixed attachment */}
-        <div className="fixed inset-0 -z-20">
-          {/* Primary background - Circuit board image with fixed attachment */}
-          <div 
-            className="absolute inset-0 opacity-25"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1731400800900-1bce57414c09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBsYWNhJTIwZGUlMjBjaXJjdWl0byUyMGVsZXRyaWNvfGVufDB8fDB8fHwy')`,
-              backgroundAttachment: 'fixed',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          ></div>
-          
-          {/* Secondary layer for depth - also with fixed attachment */}
-          <div 
-            className="absolute inset-0 opacity-15"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80')`,
-              backgroundAttachment: 'fixed',
-              backgroundPosition: 'right center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}
-          ></div>
-          
-          {/* Base gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-blue-800/20 to-red-600/30"></div>
-        </div>
-
-        {/* Floating elements with JavaScript parallax - these keep the parallax effect */}
+        {/* Floating elements with JavaScript parallax */}
         <div 
           className="fixed top-20 left-10 w-3 h-3 bg-white/20 rounded-full animate-float -z-10"
           style={getParallaxStyle(0.1)}
@@ -107,9 +67,6 @@ const Index = () => {
           className="fixed bottom-20 right-12 w-2 h-2 bg-white/30 rounded-full animate-float animation-delay-700 -z-10"
           style={getParallaxStyle(0.2)}
         ></div>
-        
-        {/* Circuit pattern overlay for entire page */}
-        <div className="circuit-overlay fixed inset-0 -z-10 pointer-events-none"></div>
         
         <NavBar />
         <Hero />
