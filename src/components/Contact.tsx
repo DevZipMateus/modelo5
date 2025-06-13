@@ -47,8 +47,8 @@ const Contact = () => {
       subtitle: "Resposta rápida",
       info: "(11) 99988-7766",
       description: "Atendimento instantâneo pelo WhatsApp. Envie fotos do problema e receba diagnóstico preliminar.",
-      action: "Chamar no WhatsApp",
-      link: "https://wa.me/5555999887766?text=Olá!%20Preciso%20de%20ajuda%20com%20meu%20equipamento.",
+      action: "Solicitar Orçamento",
+      link: "https://wa.me/5555999887766?text=Olá!%20Preciso%20de%20um%20orçamento%20para%20reparo%20do%20meu%20equipamento.",
       bgColor: "bg-green-600 hover:bg-green-700",
       popular: true
     },
@@ -58,7 +58,7 @@ const Contact = () => {
       subtitle: "Atendimento direto",
       info: "(11) 3333-4444",
       description: "Ligue diretamente para nossa central de atendimento. Horário comercial de segunda a sábado.",
-      action: "Ligar Agora",
+      action: "Ligar para Orçamento",
       link: "tel:+551133334444",
       bgColor: "bg-red-600 hover:bg-red-700",
       popular: false
@@ -69,7 +69,7 @@ const Contact = () => {
       subtitle: "Suporte técnico",
       info: "contato@techhelp.com.br",
       description: "Envie detalhes do problema por e-mail. Resposta em até 2 horas no horário comercial.",
-      action: "Enviar E-mail",
+      action: "Solicitar Orçamento",
       link: "mailto:contato@techhelp.com.br?subject=Solicitação de Orçamento",
       bgColor: "bg-black hover:bg-gray-800",
       popular: false
@@ -96,16 +96,16 @@ const Contact = () => {
             ref={el => elementsRef.current[1] = el}
             className="text-4xl md:text-5xl font-black text-black mb-6 opacity-0"
           >
-            Fale Conosco e Resolva
+            Solicite Seu Orçamento
             <br />
-            <span className="text-red-600">Seu Problema Hoje</span>
+            <span className="text-red-600">Sem Compromisso</span>
           </h2>
           <p 
             ref={el => elementsRef.current[2] = el}
             className="text-xl text-gray-600 max-w-3xl mx-auto opacity-0"
           >
-            Estamos prontos para atendê-lo através de diversos canais de comunicação. 
-            Escolha a forma mais conveniente para você.
+            Entre em contato conosco através de diversos canais e receba um orçamento personalizado 
+            para o reparo do seu equipamento.
           </p>
         </div>
 
@@ -199,7 +199,7 @@ const Contact = () => {
                 </div>
                 <div className="mt-4 p-3 bg-red-50 rounded-lg">
                   <p className="text-red-800 text-sm font-medium">
-                    ⚡ Atendimento de emergência disponível via WhatsApp 24h
+                    ⚡ Orçamentos via WhatsApp disponíveis 24h
                   </p>
                 </div>
               </div>
@@ -243,12 +243,12 @@ const Contact = () => {
           </div>
           <div className="mt-8">
             <a 
-              href="https://wa.me/5555999887766?text=Olá!%20Gostaria%20de%20um%20atendimento%20personalizado." 
+              href="https://wa.me/5555999887766?text=Olá!%20Gostaria%20de%20um%20orçamento%20personalizado%20para%20meus%20equipamentos." 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              FALAR COM ESPECIALISTA AGORA
+              SOLICITAR ORÇAMENTO PERSONALIZADO
             </a>
           </div>
         </div>

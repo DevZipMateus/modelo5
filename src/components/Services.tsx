@@ -47,7 +47,6 @@ const Services = () => {
       subtitle: "Todas as marcas e modelos",
       description: "Especialistas em TVs LED, OLED, LCD e Smart TV. Consertamos problemas de imagem, som, tela quebrada, placa-mãe e muito mais.",
       features: ["Diagnóstico gratuito", "Garantia de 90 dias", "Atendimento em 24h", "Peças originais"],
-      price: "A partir de R$ 80",
       popular: false
     },
     {
@@ -56,7 +55,6 @@ const Services = () => {
       subtitle: "iPhone e Android",
       description: "Troca de tela, bateria, conector de carga, câmera, alto-falante. Especialistas em todas as marcas.",
       features: ["Reparo em 2h", "Peças AAA+", "Garantia de 60 dias", "Teste completo"],
-      price: "A partir de R$ 120",
       popular: true
     },
     {
@@ -65,7 +63,6 @@ const Services = () => {
       subtitle: "Notebooks e Desktops",
       description: "Limpeza completa, formatação, upgrade de hardware, reparo de placas, troca de HD/SSD e memória RAM.",
       features: ["Backup incluído", "Formatação completa", "Antivírus premium", "Suporte técnico"],
-      price: "A partir de R$ 100",
       popular: false
     },
     {
@@ -74,7 +71,6 @@ const Services = () => {
       subtitle: "Atendimento domiciliar",
       description: "Reparo de máquinas de lavar, micro-ondas, geladeiras, fogões, ar-condicionado e outros eletrodomésticos.",
       features: ["Visita gratuita", "Orçamento sem compromisso", "Peças de qualidade", "Garantia estendida"],
-      price: "A partir de R$ 150",
       popular: false
     }
   ];
@@ -145,7 +141,7 @@ const Services = () => {
                 {service.description}
               </p>
               
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-8">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center space-x-2 text-sm">
                     <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
@@ -153,11 +149,6 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-
-              <div className="text-center mb-6">
-                <div className="text-2xl font-bold text-black mb-1">{service.price}</div>
-                <div className="text-gray-500 text-sm">Consulte condições</div>
-              </div>
               
               <button 
                 className={cn(
@@ -201,6 +192,16 @@ const Services = () => {
               <div className="text-4xl font-bold text-red-500 mb-2">100%</div>
               <div className="text-white font-semibold">Peças originais</div>
             </div>
+          </div>
+          <div className="mt-8">
+            <button 
+              onClick={() => {
+                window.open('https://wa.me/5555999887766?text=Olá!%20Gostaria%20de%20um%20orçamento%20personalizado%20para%20meus%20equipamentos.', '_blank');
+              }}
+              className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105"
+            >
+              SOLICITAR ORÇAMENTO PERSONALIZADO
+            </button>
           </div>
         </div>
       </div>

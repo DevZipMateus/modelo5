@@ -42,46 +42,43 @@ const Plans = () => {
 
   const plans = [
     {
-      name: "Essencial",
-      price: "A partir de R$ 499/mês",
-      description: "Ideal para MEIs e pequenos empreendedores que estão iniciando.",
+      name: "Básico",
+      description: "Ideal para reparos simples e manutenção básica de equipamentos eletrônicos.",
       features: [
-        "Contabilidade básica",
-        "Apuração de impostos",
-        "Folha de pagamento (até 5 funcionários)",
-        "Emissão de guias fiscais",
-        "Suporte por e-mail"
+        "Diagnóstico gratuito",
+        "Garantia de 30 dias",
+        "Reparo de problemas básicos",
+        "Suporte técnico por e-mail",
+        "Peças de qualidade"
       ],
       isPopular: false,
-      ctaText: "Escolher Plano"
+      ctaText: "Solicitar Orçamento"
     },
     {
-      name: "Business",
-      price: "A partir de R$ 899/mês",
-      description: "Perfeito para empresas em crescimento com necessidades específicas.",
+      name: "Completo",
+      description: "Perfeito para reparos avançados e manutenção completa com garantia estendida.",
       features: [
-        "Tudo do plano Essencial",
-        "Consultoria fiscal mensal",
-        "Folha de pagamento (até 15 funcionários)",
-        "Relatórios gerenciais básicos",
-        "Suporte por e-mail e telefone"
+        "Tudo do plano Básico",
+        "Garantia de 90 dias",
+        "Reparo de problemas complexos",
+        "Suporte prioritário",
+        "Peças originais premium"
       ],
       isPopular: true,
-      ctaText: "Escolher Plano"
+      ctaText: "Solicitar Orçamento"
     },
     {
-      name: "Enterprise",
-      price: "A partir de R$ 1.499/mês",
-      description: "Solução completa para empresas consolidadas com demandas complexas.",
+      name: "Premium",
+      description: "Solução completa para empresas e clientes que precisam de atendimento VIP.",
       features: [
-        "Tudo do plano Business",
-        "Consultoria fiscal e tributária avançada",
-        "Folha de pagamento sem limite de funcionários",
-        "Relatórios gerenciais personalizados",
-        "Suporte prioritário e consultor dedicado"
+        "Tudo do plano Completo",
+        "Atendimento domiciliar",
+        "Garantia estendida de 120 dias",
+        "Técnico dedicado",
+        "Suporte 24/7 via WhatsApp"
       ],
       isPopular: false,
-      ctaText: "Escolher Plano"
+      ctaText: "Solicitar Orçamento"
     }
   ];
 
@@ -94,10 +91,10 @@ const Plans = () => {
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="section-title" ref={el => elementsRef.current[0] = el}>
-            Planos e Preços
+            Nossos Planos de Atendimento
           </h2>
           <p className="section-subtitle" ref={el => elementsRef.current[1] = el}>
-            Escolha o plano que melhor atende às necessidades da sua empresa e comece a transformar sua contabilidade hoje mesmo.
+            Escolha o plano que melhor atende às suas necessidades e receba um orçamento personalizado.
           </p>
         </div>
 
@@ -108,51 +105,45 @@ const Plans = () => {
               ref={el => elementsRef.current[2 + index] = el}
               className={cn(
                 "rounded-lg p-8 opacity-0 relative shadow-sm hover:shadow-md transition-all duration-300",
-                plan.isPopular ? "border-2 border-accounting-blue" : "border border-accounting-lightgray/80 bg-white"
+                plan.isPopular ? "border-2 border-red-600" : "border border-gray-200 bg-white"
               )}
             >
               {plan.isPopular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accounting-blue text-white text-sm font-medium py-1 px-4 rounded-full">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-sm font-medium py-1 px-4 rounded-full">
                   Mais Popular
                 </div>
               )}
 
-              <h3 className="text-accounting-navy font-display font-bold text-2xl mb-2">
+              <h3 className="text-black font-display font-bold text-2xl mb-2">
                 {plan.name}
               </h3>
               
-              <p className="text-accounting-gray text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-6">
                 {plan.description}
               </p>
-              
-              <div className="text-accounting-navy font-display font-bold text-3xl mb-6">
-                {plan.price}
-              </div>
               
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
-                    <Check className="h-5 w-5 text-accounting-gold flex-shrink-0 mr-2 mt-0.5" />
-                    <span className="text-accounting-gray">{feature}</span>
+                    <Check className="h-5 w-5 text-green-600 flex-shrink-0 mr-2 mt-0.5" />
+                    <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
               </ul>
               
-              <a 
-                href="#contact" 
+              <button 
                 className={cn(
                   "block text-center py-3 px-6 rounded-md font-medium transition-colors duration-300 w-full",
                   plan.isPopular 
-                    ? "bg-accounting-navy hover:bg-accounting-blue text-white" 
-                    : "bg-white hover:bg-accounting-lightgray text-accounting-navy border border-accounting-navy/20"
+                    ? "bg-red-600 hover:bg-red-700 text-white" 
+                    : "bg-white hover:bg-gray-50 text-black border border-gray-300"
                 )}
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                onClick={() => {
+                  window.open('https://wa.me/5555999887766?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20o%20plano%20' + plan.name, '_blank');
                 }}
               >
                 {plan.ctaText}
-              </a>
+              </button>
             </div>
           ))}
         </div>
