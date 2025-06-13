@@ -18,15 +18,15 @@
     --secondary-foreground: 215 40% 30%;
     --muted: 210 30% 94%;
     --muted-foreground: 215 16% 46%;
-    --accent: 0 84% 60%; /* Mudado de laranja para vermelho */
+    --accent: 0 84% 60%;
     --accent-foreground: 0 0% 100%;
     --popover: 0 0% 100%;
     --popover-foreground: 215 60% 15%;
 
     /* Cores de contraste */
-    --primary: 215 70% 45%; /* Azul principal */
+    --primary: 215 70% 45%;
     --primary-foreground: 0 0% 100%;
-    --tech-green: 142 70% 45%; /* Verde para CTAs secundários */
+    --tech-green: 142 70% 45%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
     
@@ -52,6 +52,7 @@
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     letter-spacing: -0.01em;
+    font-size: 16px;
   }
 
   /* Enhanced parallax effect with better performance */
@@ -75,27 +76,43 @@
     .parallax-bg {
       background-attachment: scroll;
     }
+    
+    body {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    body {
+      font-size: 20px;
+    }
   }
 }
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-12 sm:py-16 lg:py-20 xl:py-24;
   }
   
   .section-title {
-    @apply text-foreground text-3xl md:text-4xl lg:text-5xl font-light mb-4 opacity-0 animate-slide-up tracking-tight;
+    @apply text-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-4 opacity-0 animate-slide-up tracking-tight leading-tight;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   
   .section-subtitle {
-    @apply text-secondary-foreground text-lg md:text-xl max-w-3xl mx-auto mb-12 opacity-0 animate-slide-up animation-delay-200 font-light tracking-wide;
+    @apply text-secondary-foreground text-base sm:text-lg lg:text-xl xl:text-2xl max-w-4xl mx-auto mb-8 sm:mb-12 opacity-0 animate-slide-up animation-delay-200 font-light tracking-wide leading-relaxed;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   
   .hero-title {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-6 opacity-0 animate-slide-up tracking-tight;
-    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(0, 84%, 60%) 100%); /* Mudado para vermelho */
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light mb-4 sm:mb-6 opacity-0 animate-slide-up tracking-tight leading-tight;
+    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(0, 84%, 60%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -103,7 +120,7 @@
   }
   
   .card-shadow {
-    @apply shadow-[0px_8px_30px_rgba(0,0,0,0.08)];
+    @apply shadow-[0px_4px_20px_rgba(0,0,0,0.04)] sm:shadow-[0px_8px_30px_rgba(0,0,0,0.08)];
   }
   
   .parallax-bg {
@@ -172,7 +189,7 @@
   }
   
   .service-card {
-    @apply bg-white/70 backdrop-blur-md rounded-xl p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-8px] border border-white/20;
+    @apply bg-white/70 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:shadow-[0px_8px_30px_rgba(0,0,0,0.12)] hover:translate-y-[-4px] sm:hover:translate-y-[-8px] border border-white/20;
   }
   
   .tech-overlay {
@@ -234,10 +251,14 @@
     animation: slide-up 0.6s ease-out forwards;
   }
 
-  /* Responsive parallax optimizations */
+  /* Responsive optimizations */
   @media (max-width: 768px) {
     .parallax-bg {
       background-attachment: scroll !important;
+    }
+    
+    .animate-float {
+      transform: none !important;
     }
   }
 
@@ -247,6 +268,19 @@
     .animate-slide-up {
       animation: none !important;
       transform: none !important;
+    }
+  }
+
+  /* High resolution optimizations */
+  @media (min-width: 1920px) {
+    .section-container {
+      @apply max-w-8xl;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .section-container {
+      @apply max-w-9xl;
     }
   }
 }
