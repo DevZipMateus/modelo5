@@ -58,8 +58,8 @@ const NavBar = () => {
               scrollToSection('home');
             }}
           >
-            <Settings className="h-8 w-8 text-tech-orange" />
-            <span>TechHelp <span className="text-tech-orange">Soluções</span></span>
+            <Settings className="h-8 w-8 text-red-600" />
+            <span>TechHelp <span className="text-red-600">Soluções</span></span>
           </a>
         </div>
 
@@ -69,14 +69,14 @@ const NavBar = () => {
             <a
               key={link.id}
               href={`#${link.id}`}
-              className="text-tech-blue hover:text-tech-orange transition-colors duration-300 text-sm font-medium relative group"
+              className="text-tech-blue hover:text-red-600 transition-colors duration-300 text-sm font-medium relative group"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(link.id);
               }}
             >
               {link.name}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-tech-orange transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </nav>
@@ -91,12 +91,12 @@ const NavBar = () => {
               <Menu size={24} />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[85%] p-0 bg-gradient-to-br from-white to-tech-lightgray border-l-4 border-tech-orange">
+          <SheetContent side="right" className="w-[85%] p-0 bg-gradient-to-br from-white to-tech-lightgray border-l-4 border-red-600">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center p-6 border-b border-tech-lightgray">
                 <div className="flex items-center space-x-2 font-display font-bold text-xl text-tech-blue">
-                  <Settings className="h-6 w-6 text-tech-orange" />
-                  <span>TechHelp <span className="text-tech-orange">Soluções</span></span>
+                  <Settings className="h-6 w-6 text-red-600" />
+                  <span>TechHelp <span className="text-red-600">Soluções</span></span>
                 </div>
                 <SheetClose className="p-2 rounded-full hover:bg-tech-lightgray/70 transition-all">
                   <X className="text-tech-blue" size={20} />
@@ -109,7 +109,7 @@ const NavBar = () => {
                     href={`#${link.id}`}
                     className={cn(
                       "text-tech-blue text-lg font-medium hover:bg-tech-lightgray/70 transition-all w-full text-center py-6 px-4 flex items-center justify-center",
-                      "relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-tech-orange after:transition-all after:duration-300 hover:after:w-1/3"
+                      "relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-1/3"
                     )}
                     style={{ animationDelay: `${index * 100}ms` }}
                     onClick={(e) => {

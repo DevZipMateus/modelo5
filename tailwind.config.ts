@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,14 +58,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Cores específicas da TechHelp
+				// Cores específicas da TechHelp - mudança de laranja para vermelho
 				tech: {
 					blue: 'hsl(215, 70%, 45%)',
 					darkblue: 'hsl(215, 80%, 35%)',
 					lightblue: 'hsl(215, 60%, 55%)',
 					gray: 'hsl(215, 20%, 60%)',
 					lightgray: 'hsl(210, 30%, 94%)',
-					orange: 'hsl(24, 90%, 55%)',
+					orange: 'hsl(0, 84%, 60%)', // Mudado para vermelho
 					green: 'hsl(142, 70%, 45%)',
 					white: '#FFFFFF',
 				},

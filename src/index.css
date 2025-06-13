@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -18,7 +17,7 @@
     --secondary-foreground: 215 40% 30%;
     --muted: 210 30% 94%;
     --muted-foreground: 215 16% 46%;
-    --accent: 24 90% 55%; /* Laranja para destaques */
+    --accent: 0 84% 60%; /* Mudado de laranja para vermelho */
     --accent-foreground: 0 0% 100%;
     --popover: 0 0% 100%;
     --popover-foreground: 215 60% 15%;
@@ -96,7 +95,7 @@
   
   .hero-title {
     @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-6 opacity-0 animate-slide-up tracking-tight;
-    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(24, 90%, 55%) 100%);
+    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(0, 84%, 60%) 100%); /* Mudado para vermelho */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -169,7 +168,7 @@
   }
   
   .tech-gradient {
-    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(215, 60%, 55%) 50%, hsl(24, 90%, 55%) 100%);
+    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(215, 60%, 55%) 50%, hsl(0, 84%, 60%) 100%);
   }
   
   .service-card {
@@ -177,7 +176,7 @@
   }
   
   .tech-overlay {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(29, 78, 216, 0.85) 50%, rgba(239, 68, 68, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(29, 78, 216, 0.85) 50%, rgba(220, 38, 127, 0.9) 100%);
   }
 
   /* Parallax depth layers */
