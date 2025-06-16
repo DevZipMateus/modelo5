@@ -52,7 +52,7 @@ const NavBar = () => {
         <div className="flex items-center">
           <a 
             href="#home" 
-            className="flex items-center space-x-2 text-tech-blue font-display font-bold text-lg sm:text-xl lg:text-2xl"
+            className="flex items-center space-x-2 text-orange-500 font-display font-bold text-lg sm:text-xl lg:text-2xl"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('home');
@@ -70,7 +70,7 @@ const NavBar = () => {
             <a
               key={link.id}
               href={`#${link.id}`}
-              className="text-tech-blue hover:text-red-600 transition-colors duration-300 text-sm xl:text-base font-medium relative group"
+              className="text-orange-500 hover:text-red-600 transition-colors duration-300 text-sm xl:text-base font-medium relative group"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(link.id);
@@ -86,7 +86,7 @@ const NavBar = () => {
         <Sheet>
           <SheetTrigger asChild>
             <button 
-              className="lg:hidden text-tech-blue p-2 rounded-md hover:bg-tech-lightgray/50 transition-colors" 
+              className="lg:hidden text-orange-500 p-2 rounded-md hover:bg-tech-lightgray/50 transition-colors" 
               aria-label="Open menu"
             >
               <Menu size={20} className="sm:w-6 sm:h-6" />
@@ -95,12 +95,12 @@ const NavBar = () => {
           <SheetContent side="right" className="w-[90%] sm:w-[85%] p-0 bg-gradient-to-br from-white to-tech-lightgray border-l-4 border-red-600">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center p-4 sm:p-6 border-b border-tech-lightgray">
-                <div className="flex items-center space-x-2 font-display font-bold text-lg sm:text-xl text-tech-blue">
+                <div className="flex items-center space-x-2 font-display font-bold text-lg sm:text-xl text-orange-500">
                   <Settings className="h-5 w-5 sm:h-6 sm:w-6 text-red-600" />
                   <span>TechHelp <span className="text-red-600">Soluções</span></span>
                 </div>
                 <SheetClose className="p-2 rounded-full hover:bg-tech-lightgray/70 transition-all">
-                  <X className="text-tech-blue" size={18} />
+                  <X className="text-orange-500" size={18} />
                 </SheetClose>
               </div>
               <nav className="flex flex-col items-stretch justify-start flex-1 mt-4 sm:mt-8">
@@ -109,7 +109,7 @@ const NavBar = () => {
                     key={link.id}
                     href={`#${link.id}`}
                     className={cn(
-                      "text-tech-blue text-base sm:text-lg font-medium hover:bg-tech-lightgray/70 transition-all w-full text-center py-4 sm:py-6 px-4 flex items-center justify-center",
+                      "text-orange-500 text-base sm:text-lg font-medium hover:bg-tech-lightgray/70 transition-all w-full text-center py-4 sm:py-6 px-4 flex items-center justify-center",
                       "relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-1/3"
                     )}
                     style={{ animationDelay: `${index * 100}ms` }}
