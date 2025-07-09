@@ -7,32 +7,32 @@
 
 @layer base {
   :root {
-    /* Cores primárias - baseadas na logo ZENER */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    /* Cores primárias - tons de azul e cinza */
+    --background: 215 25% 97%;
+    --foreground: 215 60% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 215 60% 15%;
 
     /* Cores secundárias */
     --secondary: 210 30% 94%;
     --secondary-foreground: 215 40% 30%;
     --muted: 210 30% 94%;
     --muted-foreground: 215 16% 46%;
-    --accent: 84 70% 55%;
+    --accent: 0 84% 60%;
     --accent-foreground: 0 0% 100%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 215 60% 15%;
 
-    /* Cores de contraste - Verde ZENER como primária */
-    --primary: 84 70% 55%;
+    /* Cores de contraste */
+    --primary: 215 70% 45%;
     --primary-foreground: 0 0% 100%;
-    --tech-green: 84 70% 55%;
+    --tech-green: 142 70% 45%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
     
     --border: 214 32% 88%;
     --input: 214 32% 88%;
-    --ring: 84 70% 55%;
+    --ring: 215 70% 45%;
 
     --radius: 0.5rem;
   }
@@ -112,7 +112,7 @@
   
   .hero-title {
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light mb-4 sm:mb-6 opacity-0 animate-slide-up tracking-tight leading-tight;
-    background: linear-gradient(135deg, hsl(84, 70%, 55%) 0%, hsl(0, 0%, 9%) 100%);
+    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(0, 84%, 60%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -185,7 +185,7 @@
   }
   
   .tech-gradient {
-    background: linear-gradient(135deg, hsl(84, 70%, 55%) 0%, hsl(84, 60%, 45%) 50%, hsl(0, 0%, 9%) 100%);
+    background: linear-gradient(135deg, hsl(215, 70%, 45%) 0%, hsl(215, 60%, 55%) 50%, hsl(0, 84%, 60%) 100%);
   }
   
   .service-card {
@@ -193,7 +193,7 @@
   }
   
   .tech-overlay {
-    background: linear-gradient(135deg, rgba(123, 193, 66, 0.9) 0%, rgba(98, 154, 53, 0.85) 50%, rgba(23, 23, 23, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(29, 78, 216, 0.85) 50%, rgba(220, 38, 127, 0.9) 100%);
   }
 
   /* Parallax depth layers */

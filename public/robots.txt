@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Disallow admin and login paths
-Disallow: /admin/
-Disallow: /login/
-
-# Sitemap location
-Sitemap: https://zener-seguranca.com/sitemap.xml
