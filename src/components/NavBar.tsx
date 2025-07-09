@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { Menu, X, Settings } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
 const NavBar = () => {
@@ -32,10 +32,11 @@ const NavBar = () => {
 
   const navLinks = [
     { name: 'Início', id: 'home' },
+    { name: 'Sobre', id: 'about' },
     { name: 'Serviços', id: 'services' },
     { name: 'Como Funciona', id: 'how-it-works' },
-    { name: 'Sobre Nós', id: 'about' },
-    { name: 'Avaliações', id: 'reviews' },
+    { name: 'Depoimentos', id: 'reviews' },
+    { name: 'Localização', id: 'location' },
     { name: 'Contato', id: 'contact' },
   ];
 
@@ -52,15 +53,15 @@ const NavBar = () => {
         <div className="flex items-center">
           <a 
             href="#home" 
-            className="flex items-center space-x-2 text-orange-500 font-display font-bold text-lg sm:text-xl lg:text-2xl"
+            className="flex items-center space-x-2 text-tech-green font-display font-bold text-lg sm:text-xl lg:text-2xl"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('home');
             }}
           >
-            <Settings className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-red-600" />
-            <span className="hidden sm:inline">TechHelp <span className="text-red-600">Soluções</span></span>
-            <span className="sm:hidden">TechHelp</span>
+            <Shield className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-tech-green" />
+            <span className="hidden sm:inline">ZENER <span className="text-tech-dark">SEGURANÇA</span></span>
+            <span className="sm:hidden">ZENER</span>
           </a>
         </div>
 
@@ -70,14 +71,14 @@ const NavBar = () => {
             <a
               key={link.id}
               href={`#${link.id}`}
-              className="text-orange-500 hover:text-red-600 transition-colors duration-300 text-sm xl:text-base font-medium relative group"
+              className="text-tech-green hover:text-tech-dark transition-colors duration-300 text-sm xl:text-base font-medium relative group"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(link.id);
               }}
             >
               {link.name}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-tech-green transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </nav>
@@ -86,21 +87,21 @@ const NavBar = () => {
         <Sheet>
           <SheetTrigger asChild>
             <button 
-              className="lg:hidden text-orange-500 p-2 rounded-md hover:bg-tech-lightgray/50 transition-colors" 
+              className="lg:hidden text-tech-green p-2 rounded-md hover:bg-tech-lightgray/50 transition-colors" 
               aria-label="Open menu"
             >
               <Menu size={20} className="sm:w-6 sm:h-6" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[90%] sm:w-[85%] p-0 bg-gradient-to-br from-white to-tech-lightgray border-l-4 border-red-600">
+          <SheetContent side="right" className="w-[90%] sm:w-[85%] p-0 bg-gradient-to-br from-white to-tech-lightgray border-l-4 border-tech-green">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center p-4 sm:p-6 border-b border-tech-lightgray">
-                <div className="flex items-center space-x-2 font-display font-bold text-lg sm:text-xl text-orange-500">
-                  <Settings className="h-5 w-5 sm:h-6 sm:w-6 text-red-600" />
-                  <span>TechHelp <span className="text-red-600">Soluções</span></span>
+                <div className="flex items-center space-x-2 font-display font-bold text-lg sm:text-xl text-tech-green">
+                  <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-tech-green" />
+                  <span>ZENER <span className="text-tech-dark">SEGURANÇA</span></span>
                 </div>
                 <SheetClose className="p-2 rounded-full hover:bg-tech-lightgray/70 transition-all">
-                  <X className="text-orange-500" size={18} />
+                  <X className="text-tech-green" size={18} />
                 </SheetClose>
               </div>
               <nav className="flex flex-col items-stretch justify-start flex-1 mt-4 sm:mt-8">
@@ -109,8 +110,8 @@ const NavBar = () => {
                     key={link.id}
                     href={`#${link.id}`}
                     className={cn(
-                      "text-orange-500 text-base sm:text-lg font-medium hover:bg-tech-lightgray/70 transition-all w-full text-center py-4 sm:py-6 px-4 flex items-center justify-center",
-                      "relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-1/3"
+                      "text-tech-green text-base sm:text-lg font-medium hover:bg-tech-lightgray/70 transition-all w-full text-center py-4 sm:py-6 px-4 flex items-center justify-center",
+                      "relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-tech-green after:transition-all after:duration-300 hover:after:w-1/3"
                     )}
                     style={{ animationDelay: `${index * 100}ms` }}
                     onClick={(e) => {
@@ -125,7 +126,7 @@ const NavBar = () => {
               </nav>
               <div className="p-4 sm:p-6 border-t border-tech-lightgray mt-auto">
                 <div className="text-tech-gray text-xs sm:text-sm text-center">
-                  © 2024 TechHelp Soluções - Todos os direitos reservados
+                  © 2024 ZENER SEGURANÇA ELETRÔNICA - Todos os direitos reservados
                 </div>
               </div>
             </div>

@@ -69,13 +69,13 @@ const Hero = () => {
               fontFamily: 'Inter, system-ui, -apple-system, sans-serif'
             }}
           >
-            ASSISTÊNCIA TÉCNICA
+            SEGURANÇA ELETRÔNICA
             <br />
             <span 
               className="font-black"
               style={{
-                color: '#dc2626',
-                textShadow: '0 4px 40px rgba(220, 38, 38, 0.8)'
+                color: '#7BC142',
+                textShadow: '0 4px 40px rgba(123, 193, 66, 0.8)'
               }}
             >
               PROFISSIONAL
@@ -92,9 +92,9 @@ const Hero = () => {
               fontFamily: 'Inter, system-ui, -apple-system, sans-serif'
             }}
           >
-            Especialistas em <span className="text-red-400 font-bold">TVs, Celulares, Computadores</span>
+            Especialistas em <span className="text-tech-green font-bold">Alarmes, CFTV, Automatização</span>
             <br className="hidden sm:block" />
-            <span className="block sm:inline text-base sm:text-lg md:text-xl lg:text-2xl mt-2 sm:mt-0"> Diagnóstico gratuito • Garantia de 90 dias</span>
+            <span className="block sm:inline text-base sm:text-lg md:text-xl lg:text-2xl mt-2 sm:mt-0"> ZENER FORTALECENDO A SUA SEGURANÇA</span>
           </p>
 
           {/* Call to Actions simplificado */}
@@ -104,10 +104,10 @@ const Hero = () => {
             style={{ animationDelay: '600ms' }}
           >
             <a 
-              href="https://wa.me/5555999887766?text=Olá!%20Preciso%20de%20um%20orçamento%20para%20reparo%20do%20meu%20equipamento." 
+              href="https://wa.me/5514998332104?text=Olá!%20Preciso%20de%20um%20orçamento%20para%20sistema%20de%20segurança." 
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white px-8 sm:px-12 lg:px-16 py-4 sm:py-6 rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              className="bg-tech-green hover:bg-tech-green/90 text-white px-8 sm:px-12 lg:px-16 py-4 sm:py-6 rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               ORÇAMENTO GRATUITO
             </a>
@@ -126,7 +126,7 @@ const Hero = () => {
             style={{ animationDelay: '800ms' }}
           >
             <p className="text-white/90 text-lg sm:text-xl font-medium mb-4">
-              +15 anos de experiência • +5.000 equipamentos reparados
+              Soluções integradas em sistemas de segurança • Produtos inovadores
             </p>
           </div>
         </div>
